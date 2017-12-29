@@ -4,8 +4,8 @@ import Validate from 'express-validation';
 import {Rules} from '../models/book'
 const Router   =   express.Router();
 
-Router.get('/test', (req,res)=>{
-    res.send('Test Pass');
+Router.get('/', (req,res)=>{
+    res.send('Server is up!');
 });
 
 /*

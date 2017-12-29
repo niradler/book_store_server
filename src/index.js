@@ -23,7 +23,7 @@ app.use((err, req, res, next)=>{
 });
 app.use('/api/',Routes);
 try{
-  db.raw('select * from books2').then((r)=>console.log(r)).catch((e)=>{
+  db.raw('select * from books').then((r)=>console.log(r)).catch((e)=>{
     console.log('migrate')
     migrate();
   })

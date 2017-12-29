@@ -10,7 +10,7 @@
     "clean": "rm -rf dist && mkdir dist && webpack",
     "dev": "npm run clean && concurrently --kill-others \"webpack --watch\" \"forever -w ./dist/bundle.js\"",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "build": "webpack",
+    "build": "set NODE_ENV=prod webpack",
     "lint": "eslint --ext .js",
     "start": "npm run build && node dist/bundle.js"
   },
